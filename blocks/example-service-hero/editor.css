@@ -1,0 +1,227 @@
+/* Editor Styles for Hero Servicio Destacado */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+	--hero-service-beige: #FDF3E7;
+	--hero-service-dark: #4A3B32;
+	--font-poppins: 'Poppins', sans-serif;
+	--font-inter: 'Inter', sans-serif;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero {
+	margin-bottom: 2rem;
+	margin-left: calc(-1 * ((100vw - 100%) / 2));
+	margin-right: calc(-1 * ((100vw - 100%) / 2));
+	width: 100vw;
+	min-height: 490px;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	background-color: #FDF3E7;
+	border-radius: 30px;
+	overflow: hidden;
+	height: 450px;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__video-column {
+	width: 100%;
+	height: 250px;
+	aspect-ratio: auto;
+	background: #000;
+	overflow: hidden;
+	border-radius: 0;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__content {
+	width: 100%;
+	padding: 28px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	text-align: left;
+	border-radius: 0;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__title {
+	margin: 0 0 4px 0;
+	font-size: 24px;
+	font-weight: 700;
+	color: #4A3B32;
+	line-height: 1.1;
+	letter-spacing: -0.5px;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__author {
+	display: block;
+	font-size: 13px;
+	color: #4A3B32;
+	font-weight: 400;
+	opacity: 0.7;
+	margin-bottom: 4px;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__description {
+	margin: 4px 0 12px 0;
+	font-size: 14px;
+	color: #4A3B32;
+	line-height: 1.5;
+	opacity: 0.85;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__cta {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin-top: 8px;
+	padding: 12px 20px;
+	background-color: #4A3B32;
+	color: #FFFFFF;
+	text-decoration: none;
+	border-radius: 25px;
+	font-weight: 600;
+	font-size: 13px;
+	letter-spacing: 0.3px;
+	transition: all 0.3s ease;
+	border: 2px solid #4A3B32;
+	cursor: pointer;
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__cta:hover {
+	background-color: rgba(74, 59, 50, 0.85);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(74, 59, 50, 0.2);
+}
+
+.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__cta-arrow {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+/* Mobile Only */
+@media (max-width: 767px) {
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__wrapper {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__video-column {
+		height: 250px;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__content {
+		width: 100%;
+		padding: 24px 20px;
+	}
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__wrapper {
+		flex-direction: row;
+		min-height: 550px;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__video-column {
+		width: 55%;
+		aspect-ratio: auto;
+		height: 100%;
+		border-radius: 30px 0 0 30px;
+		position: relative;
+		-webkit-mask-image: linear-gradient(to right, #000000 0%, #000000 60%, transparent 100%);
+		mask-image: linear-gradient(to right, #000000 0%, #000000 60%, transparent 100%);
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__content {
+		width: 55%;
+		padding: 60px 50px;
+		justify-content: center;
+		gap: 12px;
+		border-radius: 0 30px 30px 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__title {
+		font-family: var(--font-poppins);
+		font-size: 50px;
+		font-weight: 700;
+		margin: 0;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__author {
+		font-family: var(--font-inter);
+		font-size: 16px;
+		font-weight: 500;
+		margin: 0 0 8px 0;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__description {
+		font-family: var(--font-inter);
+		font-size: 17px;
+		font-weight: 400;
+		margin: 8px 0 16px 0;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__cta {
+		font-family: var(--font-inter);
+		padding: 12px 28px;
+		font-size: 13px;
+		border-radius: 999px;
+	}
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__wrapper {
+		min-height: 550px;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__video-column {
+		width: 45%;
+		border-radius: 0 0 40px 0;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__content {
+		width: 55%;
+		padding: 70px 60px;
+		gap: 20px;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__title {
+		font-family: var(--font-poppins);
+		font-size: 58px;
+		font-weight: 700;
+		margin: 0;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__author {
+		font-family: var(--font-inter);
+		font-size: 17px;
+		font-weight: 500;
+		margin: 0 0 10px 0;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__description {
+		font-family: var(--font-inter);
+		font-size: 18px;
+		font-weight: 400;
+		margin: 10px 0 20px 0;
+	}
+
+	.wp-block-wp-plugin-gutenberg-blocks-example-service-hero .service-hero__cta {
+		padding: 15px 32px;
+		font-size: 16px;
+		border-radius: 999px;
+	}
+}

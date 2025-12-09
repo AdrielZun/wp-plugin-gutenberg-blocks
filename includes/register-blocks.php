@@ -33,7 +33,22 @@ function acf_blocks_register_blocks() {
         
         // Registrar el bloque si existe block.json
         if (file_exists($block_json)) {
-            register_block_type($block_json);
+            // Leer el JSON para obtener configuración
+            $block_json_data = json_decode(file_get_contents($block_json), true);
+            
+            // Si existe render.php, registrar con render callback
+            $render_file = $block . '/render.php';
+            if (file_exists($render_file)) {
+                register_block_type($block_json, array(
+                    'render_callback' => function($attributes, $content) use ($render_file) {
+                        ob_start();
+                        include $render_file;
+                        return ob_get_clean();
+                    }
+                ));
+            } else {
+                register_block_type($block_json);
+            }
             
             // Cargar fields.php si existe
             $fields_file = $block . '/fields.php';

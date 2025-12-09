@@ -3,7 +3,7 @@
  * Plugin Name: ACF Blocks Starter
  * Plugin URI: https://github.com/sil7en/wp-plugin-gutenberg-blocks
  * Description: Plugin base para crear bloques Gutenberg personalizados con ACF Pro, Tailwind CSS y mejores prácticas SEO
- * Version: 1.0.0
+ * Version: 1.0.17
  * Requires at least: 6.2
  * Requires PHP: 7.4
  * Author: Pablo Silva Pastén Sil7en
@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Definir constantes del plugin
-define('ACF_BLOCKS_VERSION', '1.0.0');
+define('ACF_BLOCKS_VERSION', '1.0.17');
 define('ACF_BLOCKS_PATH', plugin_dir_path(__FILE__));
 define('ACF_BLOCKS_URL', plugin_dir_url(__FILE__));
 
@@ -51,7 +51,7 @@ function acf_blocks_category($categories) {
     return array_merge(
         [
             [
-                'slug'  => 'acf-blocks',
+                'slug'  => 'wp-plugin-gutenberg-blocks',
                 'title' => __('Bloques Personalizados', 'acf-blocks-starter'),
                 'icon'  => 'layout',
             ],
